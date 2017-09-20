@@ -18,7 +18,12 @@ public class LA1a {
 	public static int[] countLetters(String word) {
 		int[] counts = new int[26];
 		
-		// write your code here
+		for (char c : word.toCharArray()) {
+			c = Character.toLowerCase(c);
+			if (c >= 'a' && c <= 'z') {
+				counts[c-'a']++;
+			}
+		}
 		
 		return counts;
 	}
